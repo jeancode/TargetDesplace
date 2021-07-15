@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tarjetas Des</title>
+	<style>
+		body{
+			margin: 0px;
+			font-family:sans-serif;
+		}
+		#contenido{
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			background: #212a38;
+			background-size: cover;
+			background-position: center;
+			
+		}
+		#tarjetas{
+			
+			width: 600px;
+			height: 450px;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			align-items: center;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+		.items{
+			width: calc(100% /2 - 20px);
+			height: 170px;
+			background: rgb(0, 0, 0);
+			background: linear-gradient(0deg,rgb(85, 111, 137),rgb(85, 111, 137),rgba(255, 0, 226, 0),rgba(255, 0, 226, 0));
+			position: relative;
+			color: white;
+			backdrop-filter:blur(3px);
+			
+			-webkit-transition:all .5s ease;
+		}
+		.items:hover .item-image{
+			transform:translateY(-90px)  translateX(-20px) rotate(-20deg) scale(.9);
+			-webkit-transition:all .5s ease;
+			
+		}
+
+		.items:hover .item-texto{
+			transform:translateY(85px);
+			-webkit-transition:all .5s ease;
+			opacity: 1;
+		}
+		.items:hover{
+			height: 200px;
+			-webkit-transition:all .5s ease;
+		}
+		.item-image{
+			width: 100%;
+			height: 200px;
+			background-repeat: no-repeat;
+			background-size: 540px;
+			background-position: center;
+			border-radius: 9px;
+			transform: translateY(-40px) scale(.9);
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+			overflow: hidden;
+			z-index: 3;
+			position: relative;
+			-webkit-transition:all .5s ease;
+			
+		}
+		.item-texto{
+			position: absolute;
+			top:0px;
+			-webkit-transition:all .5s ease;
+			width: 100%;
+			text-align: center;
+			padding-top: 20px;
+			padding-bottom: 20px;
+
+			
+		}
+		.w{
+			background-image: url(images/w11.png);
+		}
+		.u{
+			background-image: url(images/ubuntu.png);
+		}
+	</style>
+</head>
+<body>
+	<div id="contenido">
+		
+		<div id="tarjetas">
+			
+			<div class="items">
+				<div class="item-image w">
+					
+					
+				</div>
+				<div class="item-texto">
+					<h3>Windows 11</h3>
+					Sistema Operativo Microsoft
+					
+				</div>
+			</div>
+			<div class="items">
+				<div class="item-image u">
+					
+					
+				</div>
+				<div class="item-texto">
+					<h3>Ubuntu</h3>
+					Sistema Operativo Linux
+				</div>	
+			</div>
+			
+		</div>
+		
+	</div>
+</body>
+</html>
